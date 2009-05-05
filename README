@@ -1,3 +1,27 @@
-Run with
+== Run with
+
 ruby main.rb
+
+
+== Example output
+
+$ ruby main.rb
+In a world with 3 doors the following players have won:
+	 cheating player 	has won   10000 games (   100  %)
+	 clever player 	has won   6706 games (   67  %)
+	 normal player 	has won   3383 games (   33  %)
+
+-----------------
+In a world with 4 doors the following players have won:
+	 cheating player 	has won   10000 games (   100  %)
+	 clever player 	has won   3686 games (   36  %)
+	 normal player 	has won   2576 games (   25  %)
+
+-----------------
+In a world with 5 doors the following players have won:
+	 cheating player 	has won   10000 games (   100  %)
+	 clever player 	has won   2676 games (   26  %)
+	 normal player 	has won   1962 games (   19  %)
+
+
 
