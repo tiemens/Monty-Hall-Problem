@@ -42,10 +42,7 @@ class World
     @doors.select { |e|  e.is_open?  }
   end
 
-  # Has the player won this game (is a door with a price open)?
-  def has_player_won?
-    all_open_doors().find_all { |door| door.is_win?  }.length > 0
-  end
+
 
   #
   def initialize(num_doors)

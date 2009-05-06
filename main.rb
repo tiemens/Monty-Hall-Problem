@@ -86,7 +86,7 @@ def play(player)
   players_door = player.finally_choose_door()
   players_door.open
 
-  return world.has_player_won?
+  return players_door.is_win?
 
 end
 
