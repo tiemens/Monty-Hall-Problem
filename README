@@ -1,29 +1,31 @@
-== Run with ==
+h1. Run with
 
 ruby main.rb
 
 
-== Example output ==
+h2. Example output
+
+$ ruby main.rb 
 
 
 -----------------
 
-  I am your host for today: ÚnKnowing Monty
+  I am your host for today: UnKnowing Monty
 
 -----------------
 
-        In a world with 3 doors the following players have won:
-                 cheating player         has won   10000 games (   100  %)
-                 normal player         has won   6650 games (   66  %)
-                 clever player         has won   6638 games (   66  %)
+	In a world with 3 doors the following players have won:
+		 cheating player 	has won   10000 games (   100  %)
+		 normal player 	has won   3408 games (   34  %)
+		 clever player 	has won   3369 games (   33  %)
 
-        -----------------
-        In a world with 4 doors the following players have won:
-                 cheating player         has won   10000 games (   100  %)
-                 clever player         has won   5085 games (   50  %)
-                 normal player         has won   5078 games (   50  %)
+	-----------------
+	In a world with 4 doors the following players have won:
+		 cheating player 	has won   10000 games (   100  %)
+		 clever player 	has won   2555 games (   25  %)
+		 normal player 	has won   2499 games (   24  %)
 
-        -----------------
+	-----------------
 
 
 -----------------
@@ -32,16 +34,16 @@ ruby main.rb
 
 -----------------
 
-        In a world with 3 doors the following players have won:
-                 cheating player         has won   10000 games (   100  %)
-                 clever player         has won   6618 games (   66  %)
-                 normal player         has won   3286 games (   32  %)
+	In a world with 3 doors the following players have won:
+		 cheating player 	has won   10000 games (   100  %)
+		 clever player 	has won   6609 games (   66  %)
+		 normal player 	has won   3366 games (   33  %)
 
-        -----------------
-        In a world with 4 doors the following players have won:
-                 cheating player         has won   10000 games (   100  %)
-                 clever player         has won   3714 games (   37  %)
-                 normal player         has won   2491 games (   24  %)
+	-----------------
+	In a world with 4 doors the following players have won:
+		 cheating player 	has won   10000 games (   100  %)
+		 clever player 	has won   3810 games (   38  %)
+		 normal player 	has won   2510 games (   25  %)
 
-        -----------------
+	-----------------
 
