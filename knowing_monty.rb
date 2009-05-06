@@ -1,8 +1,12 @@
 
 
 # This is out host Monty Hall
-class Monty
+# This Monty knows, what he is doing.
+class KnowingMonty
 
+  def to_s
+    "Knowing Monty"
+  end
 
   def initialize()
     @world = nil

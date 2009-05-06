@@ -1,6 +1,9 @@
-require 'monty.rb'
 require 'world.rb'
 require 'statistics.rb'
+
+require 'knowing_monty.rb'
+require 'un_knowing_monty.rb'
+
 
 require 'base_player.rb'
 require 'changing_player.rb'
@@ -34,12 +37,12 @@ require 'cheating_player.rb'
 class Game
 
   # Our statistics
-  attr_reader :stats, :num_of_doors_in_this_world
+  attr_reader :stats, :num_of_doors_in_this_world, :monty
   
-  def initialize(num_games_to_play, num_of_doors_in_this_world )
+  def initialize(monty, num_games_to_play, num_of_doors_in_this_world )
     @stats = {}
     
-    @monty = Monty.new
+    @monty = monty
     @num_of_doors_in_this_world = num_of_doors_in_this_world
     @num_games = num_games_to_play
   end
@@ -89,21 +92,31 @@ end
 
 end
 
-(3..5).each do
-|num_doors|
+[UnKnowingMonty.new, KnowingMonty.new].each do
+    |monty|
 
-game = Game.new(10000, num_doors)
 
-game.test_player(BasePlayer.new)
-game.test_player(ChangingPlayer.new)
-game.test_player(CheatingPlayer.new)
+    puts "\n\n-----------------"
+    puts ""
+    puts "  I am your host for today: #{monty}"
+    puts ""
+    puts "-----------------\n\n"
+    
+    (3..4).each do
+      |num_doors|
 
-ranking = game.stats.values.sort{ |s1, s2| s2.games_won <=> s1.games_won }
+      game = Game.new(monty, 10000, num_doors)
 
-puts "In a world with #{game.num_of_doors_in_this_world} doors the following players have won:"
-ranking.each do | stats |
-  puts "\t #{stats.player} \thas won   #{stats.games_won} games (   #{ (100 * stats.games_won / stats.total_games)}  %)"
-end
-puts "\n-----------------\n"
+      game.test_player(BasePlayer.new)
+      game.test_player(ChangingPlayer.new)
+      game.test_player(CheatingPlayer.new)
 
+      ranking = game.stats.values.sort{ |s1, s2| s2.games_won <=> s1.games_won }
+
+      puts "\tIn a world with #{game.num_of_doors_in_this_world} doors the following players have won:"
+      ranking.each do | stats |
+        puts "\t\t #{stats.player} \thas won   #{stats.games_won} games (   #{ (100 * stats.games_won / stats.total_games)}  %)"
+      end
+      puts "\n\t-----------------\n"
+  end
 end
