@@ -6,7 +6,7 @@
 class UnKnowingMonty
 
   def to_s
-    "ÚnKnowing Monty"
+    "UnKnowing Monty"
   end
 
   def initialize()
